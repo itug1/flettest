@@ -7,7 +7,7 @@ csvpath = os.getcwd()
 print(csvpath)
 csvpath2 = csvpath+r"/hamu.csv"
 print(csvpath2)
-csvpath2 = r"C:\Python\hamugo\hamu.csv"
+#csvpath2 = r"C:\Python\hamugo\hamu.csv"
 with open(csvpath2, encoding="shift-jis") as file:
     lsts = list(csv.reader(file))
 s = 0
@@ -230,6 +230,7 @@ def main(page: ft.Page):
         expand=0
     )
     page.add(
+        #t
         stack3
     )
 
