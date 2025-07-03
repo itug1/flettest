@@ -11,7 +11,7 @@ print(csvpath2)
 with open(csvpath2, encoding="shift-jis") as file:
     lsts = list(csv.reader(file))
 s = 0
-CONTAINER_HEIGHT=900
+CONTAINER_HEIGHT=560
 CONTAINER_WIDTH=540
 
     #print(lsts)
@@ -90,7 +90,7 @@ def main(page: ft.Page):
     page.title                      = "Cール"
     page.window.center()
     page.window.width               = 576
-    page.window.height              = 1024
+    #page.window.height              = 1024
     page.window.minimizable         = False
     page.window.maximizable         = False
     page.window.resizable           = False
@@ -135,8 +135,8 @@ def main(page: ft.Page):
     tatesen     = ft.Container(
         bgcolor         = "#42464d",
         border_radius   = ft.border_radius.all(30),
-        height          = 900,
-        width           = 2,
+        #height          = 900,
+        #width           = 2,
         top             = 0,
         left            = 255,
     )
@@ -179,8 +179,8 @@ def main(page: ft.Page):
     tatesen2     = ft.Container(
         bgcolor         = "#42464d",
         border_radius   = ft.border_radius.all(30),
-        height          = 900,
-        width           = 2,
+        #height          = 900,
+        #width           = 2,
         top             = 0,
         left            = 265,
     )    
