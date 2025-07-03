@@ -189,16 +189,16 @@ def main(page: ft.Page):
         row2,tatesen2
     ])
 #########################################################################tab3
-    butt_rot = ft.IconButton(icon=ft.Icons.COLOR_LENS,on_click=rot, icon_size=20,top=0,left=510)
-    butt_lod = ft.IconButton(icon=ft.Icons.WB_TWILIGHT,on_click=lod, icon_size=20,top=0,left=560)
-    text_q      = ft.Text("ハム語帳",size=84,color="#FFFFFF",
+    butt_rot = ft.IconButton(icon=ft.Icons.COLOR_LENS,on_click=rot, icon_size=20,top=0,left=10)
+    butt_lod = ft.IconButton(icon=ft.Icons.WB_TWILIGHT,on_click=lod, icon_size=20,top=0,left=60)
+    text_q      = ft.Text("ハム語帳",size=42,color="#FFFFFF",
+                          top=60)
+    text_a      = ft.Text("ああああああ",size=20,visible=False,color="#FFFFFF",
                           top=120)
-    text_a      = ft.Text("ああああああ",size=40,visible=False,color="#FFFFFF",
-                          top=240)
-    butt_a      = ft.Button("答へ",height=50,width=600,on_click=show_ans,
-                            top=360)
-    butt_n      = ft.Button("次え",height=50,width=600,on_click=show_nex,
-                            top=480)
+    butt_a      = ft.Button("答へ",height=50,width=500,on_click=show_ans,
+                            top=200)
+    butt_n      = ft.Button("次え",height=50,width=500,on_click=show_nex,
+                            top=270)
     stack3 = ft.Stack([
         text_q,text_a,butt_a,butt_n,butt_lod,butt_rot
     ])
