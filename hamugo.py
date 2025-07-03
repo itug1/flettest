@@ -12,7 +12,7 @@ with open(csvpath2, encoding="shift-jis") as file:
     lsts = list(csv.reader(file))
 s = 0
 CONTAINER_HEIGHT=560
-CONTAINER_WIDTH=560
+CONTAINER_WIDTH=600
 
     #print(lsts)
 
@@ -89,7 +89,7 @@ def main(page: ft.Page):
 #pageのプロパティ
     page.title                      = "Cール"
     page.window.center()
-    page.window.width               = 600
+    page.window.width               = 640
     #page.window.height              = 1024
     page.window.minimizable         = False
     page.window.maximizable         = False
