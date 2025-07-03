@@ -50,34 +50,38 @@ def main(page: ft.Page):
     def lod(e):
         if page.theme_mode == "dark":
             page.theme_mode = "light"
+            text_r.color="#000000"
             text_q.color="#000000"
             text_a.color="#000000"
         else:
             page.theme_mode = "dark"
+            text_r.color="#FFFFFF"
             text_q.color="#FFFFFF"
             text_a.color="#FFFFFF"
         page.update()
     def show_ans(e):
-        if (RNG == 131) or (RNG2 == 65):
+        if (RNG == 131) or (RNG2 == 50):
             text_q.value="ああああああああああああああああああああああああああああああああああああああ"
             text_a.value="ああああああああああああああああああああああああああああああああああああああ"
-            butt_n.disabled=False
         elif text_a.visible:
             text_a.visible=False
         else:
             text_a.visible=True
+        butt_n.disabled=False
         page.update()
     def show_nex(e):
+        global RNG,RNG2
         if page.theme_mode == "dark":
+            text_r.color="#FFFFFF"
             text_q.color="#FFFFFF"
             text_a.color="#FFFFFF"
         elif page.theme_mode == "light":
+            text_r.color="#000000"
             text_q.color="#000000"
             text_a.color="#000000"
         text_a.visible=False
         butt_a.disabled=False
         butt_n.disabled=False
-        global RNG,RNG2
         RNG = random.randint(0,131)
         RNG2 = random.randint(1,50)
         text_q.value=f"{lsts[RNG][1]}"
@@ -89,8 +93,10 @@ def main(page: ft.Page):
             text_a.value="・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・"
             #butt_a.disabled=True
             butt_n.disabled=True
+            text_r.color="#B90000"
             text_q.color="#B90000"
             text_a.color="#B90000"
+        text_r.value=f"{RNG}.{RNG2}"
         page.update()
 
 #pageのプロパティ
@@ -206,8 +212,9 @@ def main(page: ft.Page):
                             top=200)
     butt_n      = ft.Button("次え",height=50,width=500,on_click=show_nex,
                             top=270)
+    text_r      = ft.Text(value=f"{RNG}.{RNG2}", size=10,top=1)
     stack3 = ft.Stack([
-        text_q,text_a,butt_a,butt_n,butt_lod,butt_rot
+        text_q,text_a,butt_a,butt_n,butt_lod,butt_rot,text_r
     ])
 #pageに追加
     t1 = ft.Column(
