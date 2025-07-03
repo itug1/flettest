@@ -13,7 +13,8 @@ with open(csvpath2, encoding="shift-jis") as file:
 s = 0
 CONTAINER_HEIGHT=560
 CONTAINER_WIDTH=600
-
+RNG=1
+RNG2=1
     #print(lsts)
 
 #def main(page: ft.Page):
@@ -57,7 +58,10 @@ def main(page: ft.Page):
             text_a.color="#FFFFFF"
         page.update()
     def show_ans(e):
-        if text_a.visible:
+        if (RNG == 131) or (RNG2 == 65):
+            text_q.value="ああああああああああああああああああああああああああああああああああああああ"
+            text_a.value="ああああああああああああああああああああああああああああああああああああああ"
+        elif text_a.visible:
             text_a.visible=False
         else:
             text_a.visible=True
@@ -72,16 +76,18 @@ def main(page: ft.Page):
         text_a.visible=False
         butt_a.disabled=False
         butt_n.disabled=False
+        global RNG,RNG2
         RNG = random.randint(0,131)
-        RNG2 = random.randint(1,65)
+        RNG2 = random.randint(1,50)
         text_q.value=f"{lsts[RNG][1]}"
         text_a.value=f"{lsts[RNG][2]}"
-        if (RNG == 131) or (RNG2 == 65) :
+        if (RNG == 131) or (RNG2 == 50) :
             print(RNG,RNG2)
             text_a.visible=True
             text_q.value="・・・"
-            text_a.value="・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・"
-            butt_a.disabled=True
+            text_a.value="・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・・"
+            #butt_a.disabled=True
+            #butt_n.disabled=True
             text_q.color="#B90000"
             text_a.color="#B90000"
         page.update()
